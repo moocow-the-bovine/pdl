@@ -71,6 +71,7 @@ sub new_viewport {
 	 # set a default controller
 	 use PDL::Graphics::TriD::ArcBall;
 	 use PDL::Graphics::TriD::SimpleScaler;
+	 use PDL::Graphics::TriD::ScrollButtonScaler;
 	 use PDL::Graphics::TriD::Control3D;
          if (defined($PDL::Graphics::TriD::offline) and $PDL::Graphics::TriD::offline==1 ) {
             eval "use PDL::Graphics::TriD::VRML";  
@@ -87,6 +88,8 @@ sub new_viewport {
     if(ref($ev)){
 		$ev->set_button(0,new PDL::Graphics::TriD::ArcCone( $vp, 0, $cont->{WRotation}));
 		$ev->set_button(2,new PDL::Graphics::TriD::SimpleScaler( $vp, \$cont->{CDistance}));
+		$ev->set_button(3,new PDL::Graphics::TriD::ScrollButtonScaler( $vp, \$cont->{CDistance}, 0.9));
+		$ev->set_button(4,new PDL::Graphics::TriD::ScrollButtonScaler( $vp, \$cont->{CDistance}, 1.1));
 		$vp->eventhandler($ev);
 	 }
   }
