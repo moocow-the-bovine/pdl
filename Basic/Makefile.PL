@@ -27,7 +27,7 @@ WriteMakefile(
 	      'PM'       => \%pm,
 	      'MAN3PODS' => \%man3pods,
      'DIR'      => ['Pod','Gen','SourceFilter','Core','Bad','Ops','Ufunc',
-		    'Primitive','Slices','Math','MatrixOps','Complex'],
+		    'Primitive','IndOps','Slices','Math','MatrixOps','Complex'],
 	      NO_MYMETA => 1,
 );
 

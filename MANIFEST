@@ -43,6 +43,8 @@ Basic/Gen/PP/PDLCode.pm
 Basic/Gen/PP/PdlParObj.pm
 Basic/Gen/PP/Signature.pm
 Basic/Gen/pptemplate
+Basic/IndOps/indops.pd
+Basic/IndOps/Makefile.PL
 Basic/Lite.pm
 Basic/LiteF.pm
 Basic/Lvalue.pm
@@ -729,6 +731,7 @@ t/constructor.t
 t/core.t
 t/croak.t
 t/func.pdl
+t/indops.t
 t/inline-with.t
 t/inlinepdlpp.t
 t/lvalue.t
